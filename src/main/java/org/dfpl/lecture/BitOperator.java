@@ -1,7 +1,5 @@
 package org.dfpl.lecture;
 
-//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
-// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
 public class BitOperator {
     public static void main(String[] args) {
         /*
@@ -48,12 +46,15 @@ public class BitOperator {
         // 00010100 (20)  ->  00000101 (5)
 
         System.out.println(d>>2); // d를 오른쪽으로 시프트 1 삽입
+        // 2의 보수 변환
+        // 8 => 00001000 -> 11110111 -> +1 -> 11111000
         // 11111000 (-8)  ->  11111110 (-2)  // 왼쪽에 1이 채워짐 (부호 유지)
 
         System.out.printf("%x\n",(d>>>2)); // d를 오른쪽으로 시프트 0 삽입
         // >>> (부호 없는 오른쪽 시프트)
         //d >>> 2 : 비트들을 오른쪽으로 이동시킵니다. 왼쪽의 빈자리를 부호와 상관없이 무조건 0으로 채웁니다.
-        //
-        //11111000 (-8) -> 00111110 (62)
+        // 3ffffffe
+
+        // 자바 비트 연산자 ( >>, <<, >>>) -> 피연산자가 byte, short, char -> int로 자동 승격 (부호확장)
     }
 }
